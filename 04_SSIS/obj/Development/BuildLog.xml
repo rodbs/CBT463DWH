@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>04_SSIS</Name>
-    <LastWriteTime>2014-07-31T15:07:59.2189966Z</LastWriteTime>
+    <LastWriteTime>2014-08-14T13:11:40.4353444Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimProductETL.dtsx</Name>
-      <LastWriteTime>2014-07-31T15:23:10.0341477Z</LastWriteTime>
+      <LastWriteTime>2014-08-14T13:08:44.3117284Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

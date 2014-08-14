@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 11.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "02-Dimensions", "02-Dimensions\02-Dimensions.ssmssqlproj", "{E0C4020E-8A83-4CDB-A0AB-C08FFCD7EC70}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "03-Facts", "03-Facts\03-Facts.ssmssqlproj", "{46CCC328-66C2-4816-B1E9-13BD5507AA9C}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "07-PackageExecution", "07-PackageExecution\SSMS\07-PackageExecution.ssmssqlproj", "{908B8B0D-BB01-4EB0-B93F-ED7B346589C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0C4020E-8A83-4CDB-A0AB-C08FFCD7EC70}.Default|Default.ActiveCfg = Default
+		{46CCC328-66C2-4816-B1E9-13BD5507AA9C}.Default|Default.ActiveCfg = Default
+		{7D90DD58-E415-487E-B629-FD5BCC3ECE1D}.Default|Default.ActiveCfg = Default
+		{908B8B0D-BB01-4EB0-B93F-ED7B346589C4}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

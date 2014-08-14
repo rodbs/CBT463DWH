@@ -1,0 +1,5 @@
+C:\Downloads\nugs\70-463\NuggetTask\bin\Debug\NuggetTask.dll
+C:\Downloads\nugs\70-463\NuggetTask\bin\Debug\NuggetTask.pdb
+C:\Downloads\nugs\70-463\NuggetTask\bin\Debug\Microsoft.SqlServer.DTSRuntimeWrap.dll
+C:\Downloads\nugs\70-463\NuggetTask\obj\Debug\NuggetTask.dll
+C:\Downloads\nugs\70-463\NuggetTask\obj\Debug\NuggetTask.pdb

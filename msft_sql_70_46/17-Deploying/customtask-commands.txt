@@ -1,0 +1,19 @@
+
+--create key
+sn -k key.snk
+
+--export public key
+sn -p key.snk key.out
+
+--get public key
+sn -t key.out
+
+
+--register assemblies in the GAC
+gacutil -if "C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Tasks\NuggetTask.dll"
+gacutil -if "C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Tasks\NuggetTaskUI.dll"
+
+
+
+--gacutil.exe and sn.exe are located at:
+C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\

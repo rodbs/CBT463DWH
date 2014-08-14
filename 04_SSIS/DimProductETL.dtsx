@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimProductETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{8E334072-B3BB-48CD-99E1-DFAC1ACF1D0B}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{9409F795-41FB-4A4A-898E-9665615810E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2529,7 +2529,7 @@ FROM
         <NodeLayout
           Size="208,42"
           Id="Package\Add Constraints DW Tables"
-          TopLeft="744,563" />
+          TopLeft="744,564" />
         <NodeLayout
           Size="175,42"
           Id="Package\Create Temp Tables"
@@ -2724,26 +2724,26 @@ FROM
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="24,38"
+              EndConnector="24,39"
               Start="0,0"
-              End="24,30.5">
+              End="24,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15" />
+                    End="0,15.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15"
-                    Point2="0,19"
-                    Point3="4,19" />
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="4,19.5" />
                   <mssgle:LineSegment
-                    End="20,19" />
+                    End="20,19.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="20,19"
-                    Point2="24,19"
-                    Point3="24,23" />
+                    Point1="20,19.5"
+                    Point2="24,19.5"
+                    Point3="24,23.5" />
                   <mssgle:LineSegment
-                    End="24,30.5" />
+                    End="24,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2754,7 +2754,7 @@ FROM
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="952,583.5">
+          TopLeft="952,584">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

@@ -1,0 +1,127 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "04-SSIS", "04-SSIS\04-SSIS.dtproj", "{02C02239-B028-4D65-8584-44C24F9B21F0}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "06-DataFlow", "06-DataFlow\06-DataFlow.dtproj", "{41A5C861-0ACA-4429-8B2E-E03BD4447BDD}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "07-PackageExecution", "07-PackageExecution\SSIS\07-PackageExecution.dtproj", "{49D0DAF2-8A39-4435-B752-FF38473A55C5}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "08-ScriptTask", "08-ScriptTask\08-ScriptTask.dtproj", "{770A61A3-F3A1-4671-9494-EE67FDA1FC49}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "10-ControlFlow", "10-ControlFlow\10-ControlFlow.dtproj", "{2959DDA8-0E41-4827-944A-A337F5BABB45}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "11-PackageLogic", "11-PackageLogic\11-PackageLogic.dtproj", "{C7A3C229-3CDF-47A2-A620-124ABA3BFD90}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "12-DataLoading", "12-DataLoading\12-DataLoading.dtproj", "{BC538090-9ABA-429A-8764-DE943D33B57C}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "13-ScriptComponent", "13-ScriptComponent\13-ScriptComponent.dtproj", "{EFD44A4C-5389-443B-A6C5-281A31C7AB07}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "14-Troubleshooting", "14-Troubleshooting\14-Troubleshooting.dtproj", "{1F9A2409-F08E-41C9-A30A-D59E9668DEE6}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "16-LoggingAuditingEvents", "16-LoggingAuditingEvents\16-LoggingAuditingEvents.dtproj", "{C25628A0-C788-4E13-BE41-25C0018B28AA}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "17-Deploying", "17-Deploying\17-Deploying.dtproj", "{9FD688A4-D3DA-41AF-813F-2ADBF81E32E5}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "18-Security_DWDevs", "18-Security_DWDevs\18-Security_DWDevs.dtproj", "{24429165-8E3D-451D-A4AF-83165C8B4285}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "18-Security_OLTPDevs", "18-Security_OLTPDevs\18-Security_OLTPDevs.dtproj", "{5702A277-A890-453E-A9AD-4B78EC266F0C}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "20-ImplementingDQS", "20-ImplementingDQS\20-ImplementingDQS.dtproj", "{08885ECD-1DEE-4998-AFFE-67540665A7EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+		Production|Default = Production|Default
+		QA|Default = QA|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02C02239-B028-4D65-8584-44C24F9B21F0}.Development|Default.ActiveCfg = Development
+		{02C02239-B028-4D65-8584-44C24F9B21F0}.Development|Default.Build.0 = Development
+		{02C02239-B028-4D65-8584-44C24F9B21F0}.Production|Default.ActiveCfg = Production
+		{02C02239-B028-4D65-8584-44C24F9B21F0}.Production|Default.Build.0 = Production
+		{02C02239-B028-4D65-8584-44C24F9B21F0}.QA|Default.ActiveCfg = QA
+		{02C02239-B028-4D65-8584-44C24F9B21F0}.QA|Default.Build.0 = QA
+		{41A5C861-0ACA-4429-8B2E-E03BD4447BDD}.Development|Default.ActiveCfg = Development
+		{41A5C861-0ACA-4429-8B2E-E03BD4447BDD}.Development|Default.Build.0 = Development
+		{41A5C861-0ACA-4429-8B2E-E03BD4447BDD}.Production|Default.ActiveCfg = Production
+		{41A5C861-0ACA-4429-8B2E-E03BD4447BDD}.Production|Default.Build.0 = Production
+		{41A5C861-0ACA-4429-8B2E-E03BD4447BDD}.QA|Default.ActiveCfg = QA
+		{41A5C861-0ACA-4429-8B2E-E03BD4447BDD}.QA|Default.Build.0 = QA
+		{49D0DAF2-8A39-4435-B752-FF38473A55C5}.Development|Default.ActiveCfg = Development
+		{49D0DAF2-8A39-4435-B752-FF38473A55C5}.Development|Default.Build.0 = Development
+		{49D0DAF2-8A39-4435-B752-FF38473A55C5}.Production|Default.ActiveCfg = Production
+		{49D0DAF2-8A39-4435-B752-FF38473A55C5}.Production|Default.Build.0 = Production
+		{49D0DAF2-8A39-4435-B752-FF38473A55C5}.QA|Default.ActiveCfg = QA
+		{49D0DAF2-8A39-4435-B752-FF38473A55C5}.QA|Default.Build.0 = QA
+		{770A61A3-F3A1-4671-9494-EE67FDA1FC49}.Development|Default.ActiveCfg = Development
+		{770A61A3-F3A1-4671-9494-EE67FDA1FC49}.Development|Default.Build.0 = Development
+		{770A61A3-F3A1-4671-9494-EE67FDA1FC49}.Production|Default.ActiveCfg = Production
+		{770A61A3-F3A1-4671-9494-EE67FDA1FC49}.Production|Default.Build.0 = Production
+		{770A61A3-F3A1-4671-9494-EE67FDA1FC49}.QA|Default.ActiveCfg = QA
+		{770A61A3-F3A1-4671-9494-EE67FDA1FC49}.QA|Default.Build.0 = QA
+		{2959DDA8-0E41-4827-944A-A337F5BABB45}.Development|Default.ActiveCfg = Development
+		{2959DDA8-0E41-4827-944A-A337F5BABB45}.Development|Default.Build.0 = Development
+		{2959DDA8-0E41-4827-944A-A337F5BABB45}.Production|Default.ActiveCfg = Production
+		{2959DDA8-0E41-4827-944A-A337F5BABB45}.Production|Default.Build.0 = Production
+		{2959DDA8-0E41-4827-944A-A337F5BABB45}.QA|Default.ActiveCfg = QA
+		{2959DDA8-0E41-4827-944A-A337F5BABB45}.QA|Default.Build.0 = QA
+		{C7A3C229-3CDF-47A2-A620-124ABA3BFD90}.Development|Default.ActiveCfg = Development
+		{C7A3C229-3CDF-47A2-A620-124ABA3BFD90}.Development|Default.Build.0 = Development
+		{C7A3C229-3CDF-47A2-A620-124ABA3BFD90}.Production|Default.ActiveCfg = Production
+		{C7A3C229-3CDF-47A2-A620-124ABA3BFD90}.Production|Default.Build.0 = Production
+		{C7A3C229-3CDF-47A2-A620-124ABA3BFD90}.QA|Default.ActiveCfg = QA
+		{C7A3C229-3CDF-47A2-A620-124ABA3BFD90}.QA|Default.Build.0 = QA
+		{BC538090-9ABA-429A-8764-DE943D33B57C}.Development|Default.ActiveCfg = Development
+		{BC538090-9ABA-429A-8764-DE943D33B57C}.Development|Default.Build.0 = Development
+		{BC538090-9ABA-429A-8764-DE943D33B57C}.Production|Default.ActiveCfg = Development
+		{BC538090-9ABA-429A-8764-DE943D33B57C}.Production|Default.Build.0 = Development
+		{BC538090-9ABA-429A-8764-DE943D33B57C}.QA|Default.ActiveCfg = Development
+		{BC538090-9ABA-429A-8764-DE943D33B57C}.QA|Default.Build.0 = Development
+		{EFD44A4C-5389-443B-A6C5-281A31C7AB07}.Development|Default.ActiveCfg = Development
+		{EFD44A4C-5389-443B-A6C5-281A31C7AB07}.Development|Default.Build.0 = Development
+		{EFD44A4C-5389-443B-A6C5-281A31C7AB07}.Production|Default.ActiveCfg = Development
+		{EFD44A4C-5389-443B-A6C5-281A31C7AB07}.Production|Default.Build.0 = Development
+		{EFD44A4C-5389-443B-A6C5-281A31C7AB07}.QA|Default.ActiveCfg = Development
+		{EFD44A4C-5389-443B-A6C5-281A31C7AB07}.QA|Default.Build.0 = Development
+		{1F9A2409-F08E-41C9-A30A-D59E9668DEE6}.Development|Default.ActiveCfg = Development
+		{1F9A2409-F08E-41C9-A30A-D59E9668DEE6}.Development|Default.Build.0 = Development
+		{1F9A2409-F08E-41C9-A30A-D59E9668DEE6}.Production|Default.ActiveCfg = Development
+		{1F9A2409-F08E-41C9-A30A-D59E9668DEE6}.Production|Default.Build.0 = Development
+		{1F9A2409-F08E-41C9-A30A-D59E9668DEE6}.QA|Default.ActiveCfg = Development
+		{1F9A2409-F08E-41C9-A30A-D59E9668DEE6}.QA|Default.Build.0 = Development
+		{C25628A0-C788-4E13-BE41-25C0018B28AA}.Development|Default.ActiveCfg = Development
+		{C25628A0-C788-4E13-BE41-25C0018B28AA}.Development|Default.Build.0 = Development
+		{C25628A0-C788-4E13-BE41-25C0018B28AA}.Production|Default.ActiveCfg = Development
+		{C25628A0-C788-4E13-BE41-25C0018B28AA}.Production|Default.Build.0 = Development
+		{C25628A0-C788-4E13-BE41-25C0018B28AA}.QA|Default.ActiveCfg = Development
+		{C25628A0-C788-4E13-BE41-25C0018B28AA}.QA|Default.Build.0 = Development
+		{9FD688A4-D3DA-41AF-813F-2ADBF81E32E5}.Development|Default.ActiveCfg = Development
+		{9FD688A4-D3DA-41AF-813F-2ADBF81E32E5}.Development|Default.Build.0 = Development
+		{9FD688A4-D3DA-41AF-813F-2ADBF81E32E5}.Production|Default.ActiveCfg = Development
+		{9FD688A4-D3DA-41AF-813F-2ADBF81E32E5}.Production|Default.Build.0 = Development
+		{9FD688A4-D3DA-41AF-813F-2ADBF81E32E5}.QA|Default.ActiveCfg = Development
+		{9FD688A4-D3DA-41AF-813F-2ADBF81E32E5}.QA|Default.Build.0 = Development
+		{24429165-8E3D-451D-A4AF-83165C8B4285}.Development|Default.ActiveCfg = Development
+		{24429165-8E3D-451D-A4AF-83165C8B4285}.Development|Default.Build.0 = Development
+		{24429165-8E3D-451D-A4AF-83165C8B4285}.Production|Default.ActiveCfg = Development
+		{24429165-8E3D-451D-A4AF-83165C8B4285}.Production|Default.Build.0 = Development
+		{24429165-8E3D-451D-A4AF-83165C8B4285}.QA|Default.ActiveCfg = Development
+		{24429165-8E3D-451D-A4AF-83165C8B4285}.QA|Default.Build.0 = Development
+		{5702A277-A890-453E-A9AD-4B78EC266F0C}.Development|Default.ActiveCfg = Development
+		{5702A277-A890-453E-A9AD-4B78EC266F0C}.Development|Default.Build.0 = Development
+		{5702A277-A890-453E-A9AD-4B78EC266F0C}.Production|Default.ActiveCfg = Development
+		{5702A277-A890-453E-A9AD-4B78EC266F0C}.Production|Default.Build.0 = Development
+		{5702A277-A890-453E-A9AD-4B78EC266F0C}.QA|Default.ActiveCfg = Development
+		{5702A277-A890-453E-A9AD-4B78EC266F0C}.QA|Default.Build.0 = Development
+		{08885ECD-1DEE-4998-AFFE-67540665A7EE}.Development|Default.ActiveCfg = Development
+		{08885ECD-1DEE-4998-AFFE-67540665A7EE}.Development|Default.Build.0 = Development
+		{08885ECD-1DEE-4998-AFFE-67540665A7EE}.Production|Default.ActiveCfg = Development
+		{08885ECD-1DEE-4998-AFFE-67540665A7EE}.Production|Default.Build.0 = Development
+		{08885ECD-1DEE-4998-AFFE-67540665A7EE}.QA|Default.ActiveCfg = Development
+		{08885ECD-1DEE-4998-AFFE-67540665A7EE}.QA|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

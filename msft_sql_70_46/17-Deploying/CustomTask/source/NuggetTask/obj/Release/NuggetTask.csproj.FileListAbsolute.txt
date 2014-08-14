@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\NuggetTask\bin\Release\NuggetTask.dll
+C:\Users\Administrator\Desktop\NuggetTask\bin\Release\NuggetTask.pdb
+C:\Users\Administrator\Desktop\NuggetTask\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\NuggetTask\obj\Release\NuggetTask.dll
+C:\Users\Administrator\Desktop\NuggetTask\obj\Release\NuggetTask.pdb
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTask\bin\Release\NuggetTask.dll
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTask\bin\Release\NuggetTask.pdb
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTask\obj\Release\ResolveAssemblyReference.cache
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTask\obj\Release\NuggetTask.dll
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTask\obj\Release\NuggetTask.pdb

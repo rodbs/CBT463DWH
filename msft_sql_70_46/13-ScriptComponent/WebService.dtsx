@@ -1,0 +1,2206 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/11/2013 2:19:14 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="SQLNUGGET"
+  DTS:CreatorName="SQLNUGGET\Administrator"
+  DTS:DTSID="{C212B16A-55B4-4A72-9B98-342AC75DDC29}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="WebService"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{21A9F7D1-53BB-4977-B610-CE2610DD5CA6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{ADA8EF26-C492-40BE-A8F8-83B5A86883C6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="count">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1C8003C4-9F5A-4C3C-8316-6B0E41AB9E3A}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Row Count"
+              componentClassID="{E2697D8C-70DA-42B2-8208-A19CE3A9FE41}"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::count</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Script Component"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;8"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="8">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="63">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_f06cb52f28a94153b5fdee64385a283c.Properties.Settings.get_Default():SC_f06cb52f28a94153b5fdee64385a283c.Properties.Sett" +
+    "ings")]
+
+namespace SC_f06cb52f28a94153b5fdee64385a283c.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:CodeName>SC_f06cb52f28a94153b5fdee64385a283c</msb:CodeName>
+		<msb:DisplayName>SC_f06cb52f28a94153b5fdee64385a283c</msb:DisplayName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:ProjectId>{5B5B9D39-7124-4CD2-9708-900132FB2468}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_f06cb52f28a94153b5fdee64385a283c.csproj"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="app.config"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Service References\AW2012Service\Customers.xsd"/>
+		<msb:File Include="Service References\AW2012Service\Customers.wsdl"/>
+		<msb:File Include="Service References\AW2012Service\Customers.disco"/>
+		<msb:File Include="Service References\AW2012Service\Customers1.xsd"/>
+		<msb:File Include="Service References\AW2012Service\Customers2.xsd"/>
+		<msb:File Include="Service References\AW2012Service\configuration91.svcinfo"/>
+		<msb:File Include="Service References\AW2012Service\configuration.svcinfo"/>
+		<msb:File Include="Service References\AW2012Service\Reference.svcmap"/>
+		<msb:File Include="Service References\AW2012Service\Reference.cs"/>
+		<msb:File Include="Service References\AW2012Service\SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer.datasource"/>
+		<msb:Folder Include="Service References\"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_f06cb52f28a94153b5fdee64385a283c")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("SC_f06cb52f28a94153b5fdee64385a283c")]
+[assembly: AssemblyCopyright("Copyright @ Microsoft 2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public WebServiceOutputBuffer WebServiceOutputBuffer;
+
+    public virtual void FinishOutputs()
+    {
+    }
+
+    private void MarkOutputsFinished()
+    {
+
+        if (null != WebServiceOutputBuffer)
+        {
+            WebServiceOutputBuffer.SetEndOfRowset();
+            WebServiceOutputBuffer = null;
+        }
+
+    }
+
+    public override void PrimeOutput(int Outputs, int[] OutputIDs, PipelineBuffer[] Buffers, OutputNameMap OutputMap)
+    {
+       for(int Idx = 0; Idx < Outputs; Idx++)
+       {
+            if(OutputIDs[Idx] == GetOutputID(OutputMap, @"WebServiceOutput"))
+            {
+                WebServiceOutputBuffer = new WebServiceOutputBuffer(Buffers[Idx], GetColumnIndexes(OutputIDs[Idx]), OutputMap);
+            }
+        }
+
+        CreateNewOutputRows();
+
+        FinishOutputs();
+        MarkOutputsFinished();
+
+    }
+
+    public virtual void CreateNewOutputRows()
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer.datasource]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This file is automatically generated by Visual Studio .Net. It is 
+    used to store generic object data source configuration information.  
+    Renaming the file extension or editing the content of this file may   
+    cause the file to be unrecognizable by the program.
+-->
+<GenericObjectDataSource DisplayName="Customer" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer, Service References.AW2012Service.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+</GenericObjectDataSource>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\configuration.svcinfo]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data hostNameComparisonMode=&quot;StrongWildcard&quot; maxBufferSize=&quot;65536&quot; messageEncoding=&quot;Text&quot; name=&quot;BasicHttpBinding_ICustomers&quot; textEncoding=&quot;utf-8&quot; transferMode=&quot;Buffered&quot;&gt;&lt;readerQuotas maxArrayLength=&quot;16384&quot; maxBytesPerRead=&quot;4096&quot; maxDepth=&quot;32&quot; maxNameTableCharCount=&quot;16384&quot; maxStringContentLength=&quot;8192&quot; /&gt;&lt;security mode=&quot;None&quot;&gt;&lt;message algorithmSuite=&quot;Default&quot; clientCredentialType=&quot;UserName&quot; /&gt;&lt;transport clientCredentialType=&quot;None&quot; proxyCredentialType=&quot;None&quot; realm=&quot;&quot; /&gt;&lt;/security&gt;&lt;/Data&gt;" bindingType="basicHttpBinding" name="BasicHttpBinding_ICustomers" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost/CustomerWebService/Customers.svc&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;BasicHttpBinding_ICustomers&quot; contract=&quot;AW2012Service.ICustomers&quot; name=&quot;BasicHttpBinding_ICustomers&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost/CustomerWebService/Customers.svc&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;BasicHttpBinding_ICustomers&quot; contract=&quot;AW2012Service.ICustomers&quot; name=&quot;BasicHttpBinding_ICustomers&quot; /&gt;" contractName="AW2012Service.ICustomers" name="BasicHttpBinding_ICustomers" />
+  </endpoints>
+</configurationSnapshot>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\Customers.disco]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/CustomerWebService/Customers.svc?wsdl" docRef="http://localhost/CustomerWebService/Customers.svc" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+</discovery>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\configuration91.svcinfo]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Jwb/NDAi73Cvekh2LVNx9nJZMPI=">
+  <bindingConfigurations>
+    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ICustomers">
+      <properties>
+        <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>BasicHttpBinding_ICustomers</serializedValue>
+        </property>
+        <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>00:01:00</serializedValue>
+        </property>
+        <property path="/openTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>00:01:00</serializedValue>
+        </property>
+        <property path="/receiveTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>00:10:00</serializedValue>
+        </property>
+        <property path="/sendTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>00:01:00</serializedValue>
+        </property>
+        <property path="/allowCookies" isComplexType="false" isExplicitlyDefined="true" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>False</serializedValue>
+        </property>
+        <property path="/bypassProxyOnLocal" isComplexType="false" isExplicitlyDefined="true" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>False</serializedValue>
+        </property>
+        <property path="/hostNameComparisonMode" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.HostNameComparisonMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>StrongWildcard</serializedValue>
+        </property>
+        <property path="/maxBufferSize" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>65536</serializedValue>
+        </property>
+        <property path="/maxBufferPoolSize" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>524288</serializedValue>
+        </property>
+        <property path="/maxReceivedMessageSize" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>65536</serializedValue>
+        </property>
+        <property path="/messageEncoding" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.WSMessageEncoding, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Text</serializedValue>
+        </property>
+        <property path="/proxyAddress" isComplexType="false" isExplicitlyDefined="false" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/readerQuotas" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxDepth" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>32</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxStringContentLength" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>8192</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxArrayLength" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>16384</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxBytesPerRead" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>4096</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxNameTableCharCount" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>16384</serializedValue>
+        </property>
+        <property path="/security" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.BasicHttpSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.BasicHttpSecurityElement</serializedValue>
+        </property>
+        <property path="/security/mode" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.BasicHttpSecurityMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>None</serializedValue>
+        </property>
+        <property path="/security/transport" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.HttpTransportSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.HttpTransportSecurityElement</serializedValue>
+        </property>
+        <property path="/security/transport/clientCredentialType" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.HttpClientCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>None</serializedValue>
+        </property>
+        <property path="/security/transport/proxyCredentialType" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.HttpProxyCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>None</serializedValue>
+        </property>
+        <property path="/security/transport/extendedProtectionPolicy" isComplexType="true" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement</serializedValue>
+        </property>
+        <property path="/security/transport/extendedProtectionPolicy/policyEnforcement" isComplexType="false" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.PolicyEnforcement, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Never</serializedValue>
+        </property>
+        <property path="/security/transport/extendedProtectionPolicy/protectionScenario" isComplexType="false" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.ProtectionScenario, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>TransportSelected</serializedValue>
+        </property>
+        <property path="/security/transport/extendedProtectionPolicy/customServiceNames" isComplexType="true" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>(Collection)</serializedValue>
+        </property>
+        <property path="/security/transport/realm" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/security/message" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.BasicHttpMessageSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.BasicHttpMessageSecurityElement</serializedValue>
+        </property>
+        <property path="/security/message/clientCredentialType" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.BasicHttpMessageCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>UserName</serializedValue>
+        </property>
+        <property path="/security/message/algorithmSuite" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Default</serializedValue>
+        </property>
+        <property path="/textEncoding" isComplexType="false" isExplicitlyDefined="true" clrType="System.Text.Encoding, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.Text.UTF8Encoding</serializedValue>
+        </property>
+        <property path="/transferMode" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.TransferMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Buffered</serializedValue>
+        </property>
+        <property path="/useDefaultWebProxy" isComplexType="false" isExplicitlyDefined="true" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>True</serializedValue>
+        </property>
+      </properties>
+    </bindingConfiguration>
+  </bindingConfigurations>
+  <endpoints>
+    <endpoint name="BasicHttpBinding_ICustomers" contract="AW2012Service.ICustomers" bindingType="basicHttpBinding" address="http://localhost/CustomerWebService/Customers.svc" bindingConfiguration="BasicHttpBinding_ICustomers">
+      <properties>
+        <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>http://localhost/CustomerWebService/Customers.svc</serializedValue>
+        </property>
+        <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/binding" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>basicHttpBinding</serializedValue>
+        </property>
+        <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>BasicHttpBinding_ICustomers</serializedValue>
+        </property>
+        <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>AW2012Service.ICustomers</serializedValue>
+        </property>
+        <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
+        </property>
+        <property path="/headers/headers" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.Channels.AddressHeaderCollection, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>&lt;Header /&gt;</serializedValue>
+        </property>
+        <property path="/identity" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.IdentityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.IdentityElement</serializedValue>
+        </property>
+        <property path="/identity/userPrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.UserPrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
+        </property>
+        <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>
+        </property>
+        <property path="/identity/servicePrincipalName/value" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/identity/dns" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.DnsElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.DnsElement</serializedValue>
+        </property>
+        <property path="/identity/dns/value" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/identity/rsa" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.RsaElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.RsaElement</serializedValue>
+        </property>
+        <property path="/identity/rsa/value" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/identity/certificate" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.CertificateElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.CertificateElement</serializedValue>
+        </property>
+        <property path="/identity/certificate/encodedValue" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/identity/certificateReference" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.CertificateReferenceElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.CertificateReferenceElement</serializedValue>
+        </property>
+        <property path="/identity/certificateReference/storeName" isComplexType="false" isExplicitlyDefined="false" clrType="System.Security.Cryptography.X509Certificates.StoreName, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>My</serializedValue>
+        </property>
+        <property path="/identity/certificateReference/storeLocation" isComplexType="false" isExplicitlyDefined="false" clrType="System.Security.Cryptography.X509Certificates.StoreLocation, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>LocalMachine</serializedValue>
+        </property>
+        <property path="/identity/certificateReference/x509FindType" isComplexType="false" isExplicitlyDefined="false" clrType="System.Security.Cryptography.X509Certificates.X509FindType, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>FindBySubjectDistinguishedName</serializedValue>
+        </property>
+        <property path="/identity/certificateReference/findValue" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/identity/certificateReference/isChainIncluded" isComplexType="false" isExplicitlyDefined="false" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>False</serializedValue>
+        </property>
+        <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>BasicHttpBinding_ICustomers</serializedValue>
+        </property>
+        <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/endpointConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+      </properties>
+    </endpoint>
+  </endpoints>
+</SavedWcfConfigurationInformation>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_f06cb52f28a94153b5fdee64385a283c.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_f06cb52f28a94153b5fdee64385a283c.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_f06cb52f28a94153b5fdee64385a283c.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_f06cb52f28a94153b5fdee64385a283c.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_f06cb52f28a94153b5fdee64385a283c.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\Customers2.xsd]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/CustomerWebService/Customers.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AW2012CustomerService" />
+  <xs:element name="GetCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AW2012CustomerService" minOccurs="0" name="GetCustomerResult" nillable="true" type="q1:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AW2012CustomerService" minOccurs="0" name="GetCustomersResult" nillable="true" type="q2:ArrayOfCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomersByRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="region" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomersByRegionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AW2012CustomerService" minOccurs="0" name="GetCustomersByRegionResult" nillable="true" type="q3:ArrayOfCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class WebServiceOutputBuffer: ScriptBuffer
+
+{
+    public WebServiceOutputBuffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String EmailAddress
+    {
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool EmailAddress_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String LastName
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool LastName_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String FirstName
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool FirstName_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public void AddRow()
+    {
+        base.AddRow();
+    }
+
+    new public void SetEndOfRowset()
+    {
+        base.SetEndOfRowset();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\Customers.wsdl]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Customers" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/CustomerWebService/Customers.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/CustomerWebService/Customers.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/CustomerWebService/Customers.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AW2012CustomerService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICustomers_GetCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ICustomers_GetCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomers_GetCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomers" />
+  </wsdl:message>
+  <wsdl:message name="ICustomers_GetCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomers_GetCustomersByRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersByRegion" />
+  </wsdl:message>
+  <wsdl:message name="ICustomers_GetCustomersByRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersByRegionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICustomers">
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomers/GetCustomer" message="tns:ICustomers_GetCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomers/GetCustomerResponse" message="tns:ICustomers_GetCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomers/GetCustomers" message="tns:ICustomers_GetCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomers/GetCustomersResponse" message="tns:ICustomers_GetCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomersByRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomers/GetCustomersByRegion" message="tns:ICustomers_GetCustomersByRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomers/GetCustomersByRegionResponse" message="tns:ICustomers_GetCustomersByRegion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICustomers" type="tns:ICustomers">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomer">
+      <soap:operation soapAction="http://tempuri.org/ICustomers/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <soap:operation soapAction="http://tempuri.org/ICustomers/GetCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomersByRegion">
+      <soap:operation soapAction="http://tempuri.org/ICustomers/GetCustomersByRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Customers">
+    <wsdl:port name="BasicHttpBinding_ICustomers" binding="tns:BasicHttpBinding_ICustomers">
+      <soap:address location="http://localhost/CustomerWebService/Customers.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\Customers1.xsd]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="anyType" nillable="true" type="xs:anyType" />
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+  <xs:element name="boolean" nillable="true" type="xs:boolean" />
+  <xs:element name="byte" nillable="true" type="xs:byte" />
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+  <xs:element name="decimal" nillable="true" type="xs:decimal" />
+  <xs:element name="double" nillable="true" type="xs:double" />
+  <xs:element name="float" nillable="true" type="xs:float" />
+  <xs:element name="int" nillable="true" type="xs:int" />
+  <xs:element name="long" nillable="true" type="xs:long" />
+  <xs:element name="QName" nillable="true" type="xs:QName" />
+  <xs:element name="short" nillable="true" type="xs:short" />
+  <xs:element name="string" nillable="true" type="xs:string" />
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+  <xs:element name="char" nillable="true" type="tns:char" />
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int" />
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration" />
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid" />
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName" />
+  <xs:attribute name="Id" type="xs:ID" />
+  <xs:attribute name="Ref" type="xs:IDREF" />
+</xs:schema>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_f06cb52f28a94153b5fdee64385a283c.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77148002-8A65-442F-8A9A-DECCFC17F2F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_f06cb52f28a94153b5fdee64385a283c</RootNamespace>
+    <AssemblyName>SC_f06cb52f28a94153b5fdee64385a283c</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Service References\AW2012Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <None Include="Service References\AW2012Service\Customers.wsdl" />
+    <None Include="Service References\AW2012Service\Customers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AW2012Service\Customers1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AW2012Service\Customers2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AW2012Service\SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AW2012Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AW2012Service\Customers.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AW2012Service\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AW2012Service\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AW2012Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="devenv.exe" DebugInfoCommandLine="/vstaHostDebugUri:&quot;vstadebug1c800c09-ded9-49a0-a953-47e7a9379d6c/04d2bed8-5c59-476b-b055-b5cc0bb97c09&quot;" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC110</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\Reference.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.237
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+namespace SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service {
+    using System.Runtime.Serialization;
+    using System;
+    
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/AW2012CustomerService")]
+    [System.SerializableAttribute()]
+    public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressLine1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressLine2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BusinessEntityIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryRegionNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Xml.XmlElement DemographicsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailAddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EmailPromotionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MiddleNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneNumberTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PostalCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StateProvinceNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SuffixField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AddressLine1 {
+            get {
+                return this.AddressLine1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressLine1Field, value) != true)) {
+                    this.AddressLine1Field = value;
+                    this.RaisePropertyChanged("AddressLine1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AddressLine2 {
+            get {
+                return this.AddressLine2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressLine2Field, value) != true)) {
+                    this.AddressLine2Field = value;
+                    this.RaisePropertyChanged("AddressLine2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AddressType {
+            get {
+                return this.AddressTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressTypeField, value) != true)) {
+                    this.AddressTypeField = value;
+                    this.RaisePropertyChanged("AddressType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BusinessEntityID {
+            get {
+                return this.BusinessEntityIDField;
+            }
+            set {
+                if ((this.BusinessEntityIDField.Equals(value) != true)) {
+                    this.BusinessEntityIDField = value;
+                    this.RaisePropertyChanged("BusinessEntityID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CountryRegionName {
+            get {
+                return this.CountryRegionNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryRegionNameField, value) != true)) {
+                    this.CountryRegionNameField = value;
+                    this.RaisePropertyChanged("CountryRegionName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Xml.XmlElement Demographics {
+            get {
+                return this.DemographicsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DemographicsField, value) != true)) {
+                    this.DemographicsField = value;
+                    this.RaisePropertyChanged("Demographics");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EmailAddress {
+            get {
+                return this.EmailAddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailAddressField, value) != true)) {
+                    this.EmailAddressField = value;
+                    this.RaisePropertyChanged("EmailAddress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EmailPromotion {
+            get {
+                return this.EmailPromotionField;
+            }
+            set {
+                if ((this.EmailPromotionField.Equals(value) != true)) {
+                    this.EmailPromotionField = value;
+                    this.RaisePropertyChanged("EmailPromotion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FirstName {
+            get {
+                return this.FirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MiddleName {
+            get {
+                return this.MiddleNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MiddleNameField, value) != true)) {
+                    this.MiddleNameField = value;
+                    this.RaisePropertyChanged("MiddleName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PhoneNumber {
+            get {
+                return this.PhoneNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneNumberField, value) != true)) {
+                    this.PhoneNumberField = value;
+                    this.RaisePropertyChanged("PhoneNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PhoneNumberType {
+            get {
+                return this.PhoneNumberTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneNumberTypeField, value) != true)) {
+                    this.PhoneNumberTypeField = value;
+                    this.RaisePropertyChanged("PhoneNumberType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PostalCode {
+            get {
+                return this.PostalCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PostalCodeField, value) != true)) {
+                    this.PostalCodeField = value;
+                    this.RaisePropertyChanged("PostalCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StateProvinceName {
+            get {
+                return this.StateProvinceNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StateProvinceNameField, value) != true)) {
+                    this.StateProvinceNameField = value;
+                    this.RaisePropertyChanged("StateProvinceName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Suffix {
+            get {
+                return this.SuffixField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SuffixField, value) != true)) {
+                    this.SuffixField = value;
+                    this.RaisePropertyChanged("Suffix");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AW2012Service.ICustomers")]
+    public interface ICustomers {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomers/GetCustomer", ReplyAction="http://tempuri.org/ICustomers/GetCustomerResponse")]
+        SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer GetCustomer(int customerID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomers/GetCustomers", ReplyAction="http://tempuri.org/ICustomers/GetCustomersResponse")]
+        SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer[] GetCustomers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomers/GetCustomersByRegion", ReplyAction="http://tempuri.org/ICustomers/GetCustomersByRegionResponse")]
+        SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer[] GetCustomersByRegion(string region);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ICustomersChannel : SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.ICustomers, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CustomersClient : System.ServiceModel.ClientBase<SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.ICustomers>, SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.ICustomers {
+        
+        public CustomersClient() {
+        }
+        
+        public CustomersClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public CustomersClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public CustomersClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public CustomersClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer GetCustomer(int customerID) {
+            return base.Channel.GetCustomer(customerID);
+        }
+        
+        public SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer[] GetCustomers() {
+            return base.Channel.GetCustomers();
+        }
+        
+        public SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service.Customer[] GetCustomersByRegion(string region) {
+            return base.Channel.GetCustomersByRegion(region);
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[app.config]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_ICustomers" closeTimeout="00:01:00"
+                    openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+                    allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard"
+                    maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536"
+                    messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered"
+                    useDefaultWebProxy="true">
+                    <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384"
+                        maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+                    <security mode="None">
+                        <transport clientCredentialType="None" proxyCredentialType="None"
+                            realm="" />
+                        <message clientCredentialType="UserName" algorithmSuite="Default" />
+                    </security>
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost/CustomerWebService/Customers.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ICustomers"
+                contract="AW2012Service.ICustomers" name="BasicHttpBinding_ICustomers" />
+        </client>
+    </system.serviceModel>
+</configuration>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+using SC_f06cb52f28a94153b5fdee64385a283c.AW2012Service;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    CustomersClient ws;
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+
+        ws = new CustomersClient();
+        ws.Open();
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+
+        ws.Close();
+    }
+
+    public override void CreateNewOutputRows()
+    {
+
+        Customer[] cust = ws.GetCustomersByRegion("Canada");
+
+        foreach (Customer c in cust)
+        {
+            WebServiceOutputBuffer.AddRow();
+            WebServiceOutputBuffer.FirstName = c.FirstName;
+            WebServiceOutputBuffer.LastName = c.LastName;
+            WebServiceOutputBuffer.EmailAddress = c.EmailAddress;
+        }
+
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\Reference.svcmap]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d834d195-1833-4ba9-aaa3-60da92e8b7fa" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CustomerWebService/Customers.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Customers.xsd" MetadataType="Schema" ID="b32a767a-24c3-41fd-8de0-0aeab06d0c7a" SourceId="1" SourceUrl="http://localhost/CustomerWebService/Customers.svc?xsd=xsd2" />
+    <MetadataFile FileName="Customers.disco" MetadataType="Disco" ID="c81cd9ec-6fc7-4ad0-998d-7e3afb7367c0" SourceId="1" SourceUrl="http://localhost/CustomerWebService/Customers.svc?disco" />
+    <MetadataFile FileName="Customers1.xsd" MetadataType="Schema" ID="15c15186-33fc-46d0-92f3-c943e56316c6" SourceId="1" SourceUrl="http://localhost/CustomerWebService/Customers.svc?xsd=xsd1" />
+    <MetadataFile FileName="Customers.wsdl" MetadataType="Wsdl" ID="8a1090ca-fab4-46ef-9a70-01056f4a16d1" SourceId="1" SourceUrl="http://localhost/CustomerWebService/Customers.svc?wsdl" />
+    <MetadataFile FileName="Customers2.xsd" MetadataType="Schema" ID="fdbcf67d-db7b-42d0-85d0-42583ceaaf85" SourceId="1" SourceUrl="http://localhost/CustomerWebService/Customers.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Service References\AW2012Service\Customers.xsd]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AW2012CustomerService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AW2012CustomerService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessEntityID" type="xs:int" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryRegionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Demographics" nillable="true">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any minOccurs="0" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailPromotion" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumberType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateProvinceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer" />
+</xs:schema>]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_f06cb52f28a94153b5fdee64385a283c.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDABNQPlEAAAAAAAAAAOAAAiELAQgAAC4AAAAIAAAAAAAA3k0A
+AAAgAAAAYAAAAABAAAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACgAAAAAgAAAAAAAAMAQIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIxNAABPAAAAAGAAAFAEAAAAAAAAAAAAAAAAAAAA
+AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA5C0AAAAgAAAALgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAFAEAAAAYAAAAAYAAAAwAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAIAAAAACAAAANgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADA
+TQAAAAAAAEgAAAACAAUAWCcAADQmAAABAAAAAAAAAKAmAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CewEAAAQqIgIDfQEAAAQqHgJ7AgAABCqGAnsCAAAEAygT
+AAAKLRICA30CAAAEAnIBAABwKCkAAAYqHgJ7AwAABCqGAnsDAAAEAygTAAAKLRICA30DAAAEAnIb
+AABwKCkAAAYqHgJ7BAAABCqGAnsEAAAEAygTAAAKLRICA30EAAAEAnI1AABwKCkAAAYqHgJ7BQAA
+BCqGAnwFAAAEAygUAAAKLRICA30FAAAEAnJNAABwKCkAAAYqHgJ7BgAABCqGAnsGAAAEAygTAAAK
+LRICA30GAAAEAnJvAABwKCkAAAYqHgJ7BwAABCqGAnsHAAAEAygTAAAKLRICA30HAAAEAnJ5AABw
+KCkAAAYqHgJ7CAAABCqGAnsIAAAEAygTAAAKLRICA30IAAAEAnKdAABwKCkAAAYqHgJ7CQAABCqG
+AnsJAAAEAygTAAAKLRICA30JAAAEAnK3AABwKCkAAAYqHgJ7CgAABCqGAnwKAAAEAygUAAAKLRIC
+A30KAAAEAnLRAABwKCkAAAYqHgJ7CwAABCqGAnsLAAAEAygTAAAKLRICA30LAAAEAnLvAABwKCkA
+AAYqHgJ7DAAABCqGAnsMAAAEAygTAAAKLRICA30MAAAEAnIDAQBwKCkAAAYqHgJ7DQAABCqGAnsN
+AAAEAygTAAAKLRICA30NAAAEAnIVAQBwKCkAAAYqHgJ7DgAABCqGAnsOAAAEAygTAAAKLRICA30O
+AAAEAnIrAQBwKCkAAAYqHgJ7DwAABCqGAnsPAAAEAygTAAAKLRICA30PAAAEAnJDAQBwKCkAAAYq
+HgJ7EAAABCqGAnsQAAAEAygTAAAKLRICA30QAAAEAnJjAQBwKCkAAAYqHgJ7EQAABCqGAnsRAAAE
+AygTAAAKLRICA30RAAAEAnJ5AQBwKCkAAAYqHgJ7EgAABCqGAnsSAAAEAygTAAAKLRICA30SAAAE
+AnKdAQBwKCkAAAYqHgJ7EwAABCqGAnsTAAAEAygTAAAKLRICA30TAAAEAnKrAQBwKCkAAAYqAAAA
+EzADACkAAAABAAARAnsUAAAECgYLBwMoFQAACnQQAAABDAJ8FAAABAgHKAEAACsKBgcz3yoAAAAT
+MAMAKQAAAAEAABECexQAAAQKBgsHAygXAAAKdBAAAAEMAnwUAAAECAcoAQAAKwoGBzPfKgAAABMw
+BAAYAAAAAgAAEQJ7FAAABAoGLA0GAgNzGAAACm8ZAAAKKh4CKBoAAAoqHgIoHwAACioiAgMoIAAA
+CiomAgMEKCEAAAoqJgIDBCgiAAAKKiYCAwQoIwAACio2AigkAAAKA28rAAAGKjICKCQAAApvLAAA
+Bio2AigkAAAKA28tAAAGKn4CKCUAAAoCAnNJAAAGfRUAAAQCAnNKAAAGfRYAAAQqBipuAnsXAAAE
+LBICexcAAARvRwAABgIUfRcAAAQqAAATMAUASQAAAAMAABEWCisuBAaUDgRytwEAcCgmAAAKMxkC
+BQaaAgQGlCgnAAAKDgRzPwAABn0XAAAEBhdYCgYDMs4CbzoAAAYCbzcAAAYCKDgAAAYqBip2Aigp
+AAAKAnMuAAAGfRgAAAQCexgAAARvKgAACipKAigrAAAKAnsYAAAEbywAAAoqEzACAGQAAAAEAAAR
+AnsYAAAEctkBAHBvNQAABgoGDBYNK0YICZoLAnsXAAAEb0YAAAYCexcAAAQHbxUAAAZvRAAABgJ7
+FwAABAdvFwAABm9CAAAGAnsXAAAEB28RAAAGb0AAAAYJF1gNCQiOaTK0Kh4CKDYAAAYqKgIDBAUo
+LQAACiomAhYDKC4AAAoqWgMsCAIWKC8AAAoqcucBAHBzMAAACnomAhcDKC4AAAoqWgMsCAIXKC8A
+AAoqcucBAHBzMAAACnomAhgDKC4AAAoqWgMsCAIYKC8AAAoqcucBAHBzMAAACnoeAigxAAAKKh4C
+KDIAAAoqHgIoMwAACio6AigaAAAKAgN9GQAABCo6AigaAAAKAgN9GgAABCoeAigaAAAKKhMwAwAt
+AAAABQAAEX4bAAAELSByhAIAcNALAAACKDUAAApvNgAACnM3AAAKCgaAGwAABH4bAAAEKhp+HAAA
+BCoeAoAcAAAEKhp+HQAABCouc1AAAAaAHQAABCoeAig6AAAKKgAAAAAAtAAAAM7K774BAAAAkQAA
+AGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAu
+MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lz
+dGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAEJT
+SkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAGAOAAAjfgAAzA4AAJAPAAAjU3RyaW5n
+cwAAAABcHgAA+AIAACNVUwBUIQAAEAAAACNHVUlEAAAAZCEAANAEAAAjQmxvYgAAAAAAAAACAAAB
+Vxe2CQkJAAAA+iUzABYAAAEAAAA5AAAADAAAAB0AAABRAAAAMQAAAAoAAAA6AAAAPwAAAAUAAAAB
+AAAAAQAAAAQAAAAcAAAAMgAAAAIAAAABAAAABwAAAAEAAAABAAAAAAAKAAEAAAAAAAYAMgErAQoA
+VgE5AQ4AggFsARIArQGZARIAvAGZARIA6QHMARIA8gGZARIABwKZAQYAGwIrARIAJwKZARYAcgJR
+AhYAggJRAg4ApAKPAgoAvAI5ARoAWgNPAw4AmAZsARIAIQiZARIAMQjMAR4AfAhRAhYAiwhRAgYA
+jAl7CQYAvQmoCQYA6QrPCgYAFAsCCwYAKwsCCwYASAsCCwYAZwsCCwYAgAsCCwYAmQsCCwYAtAsC
+CwYAzwsCCwYA6AsCCwYAIQwBDAYAQQwBDAYAlgyDDA4AywyzDAoA4gw5AQYA+AwrAQYADg0rAQYA
+JQ05AQYATA0rAQYAWQ0rAQYAew1qDQ4Ang1sAQ4Avg1sAQoA0Q05ARIA5Q2ZARIA/g2ZARYAQg5R
+AgYAhQ4rAQYAnw6DDAYAvA4rAQYAwQ4rAQYA5Q4CCw4A+w5sAQ4AFA9sAQYAKQ8BDAAAAAABAAAA
+AAABAAEAASAQADIAOwAFAAEAAQChAAAAbQA7AAAAFQArAKEAAAB4ADsAAAAVAC4AAQAQAIoAOwAK
+ABUALgABABAAmgAAAC0AFQA2AAEAEACoAAAAGAAYADsAAQAQALMAAAAxABkAPwABABAAygAAAAUA
+GQBJAAEAEADWAAAABQAaAEoAAAAQAOAA6gAFABsASwAAARAAGQHqADUAHQBPAIEA0AIhAAEA4wIl
+AAEA9QIlAAEABwMlAAEAGAMoAAEALgMlAAEAOAMlAAEAZQMrAAEAdwMlAAEAiQMoAAEAnQMlAAEA
+rAMlAAEAugMlAAEAygMlAAEA2wMlAAEA8AMlAAEAAAQlAAEAFwQlAAEAIwQlAAEAtAZXAAYAygCf
+AAYA1gCjAAYAswCnAAEAuQi3AAEAawnSAAEAawnSABEAnAncABEAyQngABEADQr+AFAgAAAAAOYJ
+LgQvAAEAWCAAAAAA5glABDQAAQBhIAAAAACGCFIEOgACAGkgAAAAAIYIYwQ+AAIAiyAAAAAAhgh0
+BDoAAwCTIAAAAACGCIUEPgADALUgAAAAAIYIlgQ6AAQAvSAAAAAAhgimBD4ABADfIAAAAACGCLYE
+QwAFAOcgAAAAAIYIywRHAAUACSEAAAAAhgjgBDoABgARIQAAAACGCOkEPgAGADMhAAAAAIYI8gQ6
+AAcAOyEAAAAAhggIBT4ABwBdIQAAAACGCB4FTAAIAGUhAAAAAIYILwVRAAgAhyEAAAAAhghABToA
+CQCPIQAAAACGCFEFPgAJALEhAAAAAIYIYgVDAAoAuSEAAAAAhgh1BUcACgDbIQAAAACGCIgFOgAL
+AOMhAAAAAIYIlgU+AAsABSIAAAAAhgikBToADAANIgAAAACGCLEFPgAMAC8iAAAAAIYIvgU6AA0A
+NyIAAAAAhgjNBT4ADQBZIgAAAACGCNwFOgAOAGEiAAAAAIYI7AU+AA4AgyIAAAAAhgj8BToADwCL
+IgAAAACGCBAGPgAPAK0iAAAAAIYIJAY6ABAAtSIAAAAAhggzBj4AEADXIgAAAACGCEIGOgARAN8i
+AAAAAIYIWAY+ABEAASMAAAAAhghuBjoAEgAJIwAAAACGCHkGPgASACsjAAAAAIYIhAY6ABMAMyMA
+AAAAhgiOBj4AEwBYIwAAAADmCcQGWwAUAJAjAAAAAOYJ2AZbABUAyCMAAAAAhADvBj4AFgDsIwAA
+AACGGAQHYQAXAAAAAAAAAMYF8wd3ABcAAAAAAAAAxgX/B30AGAAAAAAAAADGBQwIgwAYAPQjAAAA
+AIYYBAdhABkA/CMAAAAAhhgEBz4AGQAFJAAAAACGGAQHigAaAA8kAAAAAIYYBAeQABwAGSQAAAAA
+hhgEB5cAHgAjJAAAAADmAfMHdwAgADEkAAAAAOYB/wd9ACEAPiQAAAAA5gEMCIMAIQBMJAAAAACG
+GAQHYQAiAGwkAAAAAMYBOQhhACIAbiQAAAAAgQBHCGEAIgCMJAAAAADGAJkIqwAiAOEkAAAAAMYB
+pQhhACYA4yQAAAAAxgC8CGEAJgABJQAAAADGAMcIYQAmABQlAAAAAMYApQhhACYAhCUAAAAAhhgE
+B2EAJgCMJQAAAACGGAQHuwAmAJclAAAAAIYIUQU+ACkAoSUAAAAAhgjTCMUAKgC4JQAAAACGCLEF
+PgArAMIlAAAAAIYI6wjFACwA2SUAAAAAhgiWBT4ALQDjJQAAAACGCP8IxQAuAPolAAAAAIYAFAlh
+AC8AAiYAAAAAhgAbCWEALwAKJgAAAACGACoJygAvABImAAAAAIYYBAfWAC8AISYAAAAAhhgEB9YA
+MAAwJgAAAACDGAQHYQAxADgmAAAAAJMI2QnkADEAcSYAAAAAkwjtCekAMQB4JgAAAACTCPkJ7gAx
+AIAmAAAAAJYIHQoCATIAkyYAAAAAhhgEB2EAMgCHJgAAAACRGEQPAwQyAAAAAQAxCgAAAQAxCgAA
+AQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAx
+CgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAA
+AQA3CgAAAQBECgAAAQBPCgAAAQBWCgAAAQBWCgAAAgBwCgAAAQBWCgAAAgBwCgAAAQB+CgAAAgBw
+CgAAAQBECgAAAQBPCgAAAQCGCgAAAgCOCgAAAwCYCgAABACgCgAAAQCqCgAAAgCxCgAAAwCgCgAA
+AQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQAxCgAAAQDFCgAAAQDFCgAAAQAxCgIACQAC
+AA0ABAAMAAQAEQAEABUABAAZAAQAHQAEAAYABAAlAAUADAC5AAQHPgDBAAQHPgDJAAQHPgDRAAQH
+PgDZAAQHPgDhAAQHPgDpAAQHPgDxAAQHPgD5AAQHPgABAQQHPgAJAQQHRwARAQQHYQAZAQQHYQAh
+AQQHigApAQQHYQAxAQQHYQA5AQQHYQBBAQQHYQAJADwNmgFJAVINoAFRAWINpQFZAYcNsQFRAZcN
+pQFhAQQHPgCBALcNzAEJAAQHYQBpAQQHxQBxAQQHYQB5AQQHYQCBAQQHYQAUAAQHYQAUAAQHPgAU
+AAQHigAUAAQHkAAUAAQHlwAUABkOrwNZAAQHYQBZACUOtANZADEOuwOJAQQHYQBZALwIYQAUAGkO
+YQBZAMcIYQAUAG4OYQBhAAQHuwBhAHQO0QNhAH0ORwCRAQQHPgBhABQJYQBhABsJYQBhACoJygCZ
+AQQHYQChAdMO1wOhAe4O4AOpAAQH5gO5AQQH8wPJAQQHYQBpAAQHYQApANsA2QEuAFsApwQuAEMA
+2QEuABsA2QEuADsAhwQuAAsABwQuABMATwQuAGMAsAQuACMA2QEuACsAeAQuADMATwRBAJMADAFD
+AHsAOwFDAGsADAFDAHMAEQFJAOMADAFhAJMADAFjAHMA3wFjAOsAAAJpAOMADAGBAJMADAGDAHMA
+3wGJAOMADAGhAJMADAGjAHMA3wGjAGsADAGpAOMADAHBAJMADAHJAOMADAHhAJMADAHjAEMBDAHp
+AOMADAEBAZMADAEJAeMADAEhAZMADAEpAeMADAFBAZMADAFJAeMADAFhAZMADAFjAaMBDAFpAeMA
+DAGBAZMADAGJAeMADAGhAZMADAGpAeMADAHBAZMADAHJAeMADAHhAZMADAHpAeMADAEBApMADAEJ
+AuMADAEhApMADAEpAuMADAFBApMADAFJAuMADAFhApMADAFpAuMADAFJA8MB+gNpA8MB+gOhA8sB
+DAFgBfMAMgKABfMAqgKgBfMAJAPDAdQBwQPFA+4DAgABAAAAtAZBAAIAAQAIABQACwAaAAwAHAAA
+AAoHZQAAABgHagAAACUHagAAADIHagAAAD4HbgAAAE8HagAAAFQHagAAAGYHcgAAAHMHagAAAIAH
+bgAAAI8HagAAAJkHagAAAKIHagAAAK0HagAAALkHagAAAMkHagAAANQHagAAAOYHagAAAO0HagAA
+AHMHagAAADYJzgAAAJkHagAAAEoJzgAAAI8HagAAAFoJzgAAAIwJ9AAAAAUK+QAAACkKBwEIACcA
+AgAQACgAAgABAAIAAwACAAEAAwABAAQABQACAAMABQABAAYABwACAAUABwACAAcACQABAAgACQAC
+AAkACwABAAoACwABAAwADQACAAsADQACAA0ADwABAA4ADwABABAAEQACAA8AEQABABIAEwACABEA
+EwACABMAFQABABQAFQACABUAFwABABYAFwABABgAGQACABcAGQACABkAGwABABoAGwABABwAHQAC
+ABsAHQABAB4AHwACAB0AHwACAB8AIQABACAAIQABACIAIwACACEAIwABACQAJQACACMAJQABACYA
+JwACACUAJwABAEAAKQABAEEAKwABAEIALQABAEMALwABAEQAMQABAEUAMwACAEwANQACAE0ANwAB
+AE4ANwACAE8AOQAKABEABIAAAAEAAADSEolgAAAAAAAAXwwAAAQAAAAAAAAAAAAAAAEAIgEAAAAA
+BAAAAAAAAAAAAAAAAQA5AQAAAAAEAAAAAAAAAAAAAAABACsBAAAAAAQAAAAAAAAAAAAAAAEAmQEA
+AAAACwAAAAAAAAAAAAAAGAA0AgAAAAAEAAAAAAAAAAAAAAABAE8DAAAAAAsAAAAAAAAAAAAAABgA
+WwgAAAAAAAAAAAEAAABLDwAALQC+AQAAADxNb2R1bGU+AFNDX2YwNmNiNTJmMjhhOTQxNTNiNWZk
+ZWU2NDM4NWEyODNjLmRsbABDdXN0b21lcgBTQ19mMDZjYjUyZjI4YTk0MTUzYjVmZGVlNjQzODVh
+MjgzYy5BVzIwMTJTZXJ2aWNlAElDdXN0b21lcnMASUN1c3RvbWVyc0NoYW5uZWwAQ3VzdG9tZXJz
+Q2xpZW50AFVzZXJDb21wb25lbnQAU2NyaXB0TWFpbgBXZWJTZXJ2aWNlT3V0cHV0QnVmZmVyAENv
+bm5lY3Rpb25zAFZhcmlhYmxlcwBSZXNvdXJjZXMAU0NfZjA2Y2I1MmYyOGE5NDE1M2I1ZmRlZTY0
+Mzg1YTI4M2MuUHJvcGVydGllcwBTZXR0aW5ncwBtc2NvcmxpYgBTeXN0ZW0AT2JqZWN0AFN5c3Rl
+bS5SdW50aW1lLlNlcmlhbGl6YXRpb24ASUV4dGVuc2libGVEYXRhT2JqZWN0AFN5c3RlbS5Db21w
+b25lbnRNb2RlbABJTm90aWZ5UHJvcGVydHlDaGFuZ2VkAFN5c3RlbS5TZXJ2aWNlTW9kZWwASUNs
+aWVudENoYW5uZWwASUNvbnRleHRDaGFubmVsAFN5c3RlbS5TZXJ2aWNlTW9kZWwuQ2hhbm5lbHMA
+SUNoYW5uZWwASUNvbW11bmljYXRpb25PYmplY3QASUV4dGVuc2libGVPYmplY3RgMQBJRGlzcG9z
+YWJsZQBDbGllbnRCYXNlYDEATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQu
+U3FsU2VydmVyLkR0cy5QaXBlbGluZQBTY3JpcHRDb21wb25lbnQAU2NyaXB0QnVmZmVyAFN5c3Rl
+bS5Db25maWd1cmF0aW9uAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEV4dGVuc2lvbkRhdGFPYmpl
+Y3QAZXh0ZW5zaW9uRGF0YUZpZWxkAEFkZHJlc3NMaW5lMUZpZWxkAEFkZHJlc3NMaW5lMkZpZWxk
+AEFkZHJlc3NUeXBlRmllbGQAQnVzaW5lc3NFbnRpdHlJREZpZWxkAENpdHlGaWVsZABDb3VudHJ5
+UmVnaW9uTmFtZUZpZWxkAFN5c3RlbS5YbWwAWG1sRWxlbWVudABEZW1vZ3JhcGhpY3NGaWVsZABF
+bWFpbEFkZHJlc3NGaWVsZABFbWFpbFByb21vdGlvbkZpZWxkAEZpcnN0TmFtZUZpZWxkAExhc3RO
+YW1lRmllbGQATWlkZGxlTmFtZUZpZWxkAFBob25lTnVtYmVyRmllbGQAUGhvbmVOdW1iZXJUeXBl
+RmllbGQAUG9zdGFsQ29kZUZpZWxkAFN0YXRlUHJvdmluY2VOYW1lRmllbGQAU3VmZml4RmllbGQA
+VGl0bGVGaWVsZABnZXRfRXh0ZW5zaW9uRGF0YQBzZXRfRXh0ZW5zaW9uRGF0YQBnZXRfQWRkcmVz
+c0xpbmUxAHNldF9BZGRyZXNzTGluZTEAZ2V0X0FkZHJlc3NMaW5lMgBzZXRfQWRkcmVzc0xpbmUy
+AGdldF9BZGRyZXNzVHlwZQBzZXRfQWRkcmVzc1R5cGUAZ2V0X0J1c2luZXNzRW50aXR5SUQAc2V0
+X0J1c2luZXNzRW50aXR5SUQAZ2V0X0NpdHkAc2V0X0NpdHkAZ2V0X0NvdW50cnlSZWdpb25OYW1l
+AHNldF9Db3VudHJ5UmVnaW9uTmFtZQBnZXRfRGVtb2dyYXBoaWNzAHNldF9EZW1vZ3JhcGhpY3MA
+Z2V0X0VtYWlsQWRkcmVzcwBzZXRfRW1haWxBZGRyZXNzAGdldF9FbWFpbFByb21vdGlvbgBzZXRf
+RW1haWxQcm9tb3Rpb24AZ2V0X0ZpcnN0TmFtZQBzZXRfRmlyc3ROYW1lAGdldF9MYXN0TmFtZQBz
+ZXRfTGFzdE5hbWUAZ2V0X01pZGRsZU5hbWUAc2V0X01pZGRsZU5hbWUAZ2V0X1Bob25lTnVtYmVy
+AHNldF9QaG9uZU51bWJlcgBnZXRfUGhvbmVOdW1iZXJUeXBlAHNldF9QaG9uZU51bWJlclR5cGUA
+Z2V0X1Bvc3RhbENvZGUAc2V0X1Bvc3RhbENvZGUAZ2V0X1N0YXRlUHJvdmluY2VOYW1lAHNldF9T
+dGF0ZVByb3ZpbmNlTmFtZQBnZXRfU3VmZml4AHNldF9TdWZmaXgAZ2V0X1RpdGxlAHNldF9UaXRs
+ZQBQcm9wZXJ0eUNoYW5nZWRFdmVudEhhbmRsZXIAUHJvcGVydHlDaGFuZ2VkAGFkZF9Qcm9wZXJ0
+eUNoYW5nZWQAcmVtb3ZlX1Byb3BlcnR5Q2hhbmdlZABSYWlzZVByb3BlcnR5Q2hhbmdlZAAuY3Rv
+cgBFeHRlbnNpb25EYXRhAEFkZHJlc3NMaW5lMQBBZGRyZXNzTGluZTIAQWRkcmVzc1R5cGUAQnVz
+aW5lc3NFbnRpdHlJRABDaXR5AENvdW50cnlSZWdpb25OYW1lAERlbW9ncmFwaGljcwBFbWFpbEFk
+ZHJlc3MARW1haWxQcm9tb3Rpb24ARmlyc3ROYW1lAExhc3ROYW1lAE1pZGRsZU5hbWUAUGhvbmVO
+dW1iZXIAUGhvbmVOdW1iZXJUeXBlAFBvc3RhbENvZGUAU3RhdGVQcm92aW5jZU5hbWUAU3VmZml4
+AFRpdGxlAEdldEN1c3RvbWVyAEdldEN1c3RvbWVycwBHZXRDdXN0b21lcnNCeVJlZ2lvbgBFbmRw
+b2ludEFkZHJlc3MAQmluZGluZwBGaW5pc2hPdXRwdXRzAE1hcmtPdXRwdXRzRmluaXNoZWQATWlj
+cm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QAUGlwZWxpbmVCdWZmZXIAT3V0cHV0TmFtZU1h
+cABQcmltZU91dHB1dABDcmVhdGVOZXdPdXRwdXRSb3dzAHdzAFByZUV4ZWN1dGUAUG9zdEV4ZWN1
+dGUAc2V0X0VtYWlsQWRkcmVzc19Jc051bGwAc2V0X0xhc3ROYW1lX0lzTnVsbABzZXRfRmlyc3RO
+YW1lX0lzTnVsbABBZGRSb3cAU2V0RW5kT2ZSb3dzZXQARW5kT2ZSb3dzZXQARW1haWxBZGRyZXNz
+X0lzTnVsbABMYXN0TmFtZV9Jc051bGwARmlyc3ROYW1lX0lzTnVsbABQYXJlbnRDb21wb25lbnQA
+U3lzdGVtLlJlc291cmNlcwBSZXNvdXJjZU1hbmFnZXIAcmVzb3VyY2VNYW4AU3lzdGVtLkdsb2Jh
+bGl6YXRpb24AQ3VsdHVyZUluZm8AcmVzb3VyY2VDdWx0dXJlAGdldF9SZXNvdXJjZU1hbmFnZXIA
+Z2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAQ3VsdHVyZQBkZWZhdWx0SW5zdGFuY2UAZ2V0X0RlZmF1
+bHQARGVmYXVsdAB2YWx1ZQBwcm9wZXJ0eU5hbWUAY3VzdG9tZXJJRAByZWdpb24AZW5kcG9pbnRD
+b25maWd1cmF0aW9uTmFtZQByZW1vdGVBZGRyZXNzAGJpbmRpbmcAT3V0cHV0cwBPdXRwdXRJRHMA
+QnVmZmVycwBPdXRwdXRNYXAAQnVmZmVyAEJ1ZmZlckNvbHVtbkluZGV4ZXMAQ29tcG9uZW50AFN5
+c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAFN5c3RlbS5S
+ZWZsZWN0aW9uAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJp
+YnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmli
+dXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBB
+c3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBBc3NlbWJseUN1bHR1cmVBdHRyaWJ1dGUAQXNzZW1i
+bHlWZXJzaW9uQXR0cmlidXRlAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAQ29tcGls
+YXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBT
+Q19mMDZjYjUyZjI4YTk0MTUzYjVmZGVlNjQzODVhMjgzYwBTeXN0ZW0uRGlhZ25vc3RpY3MARGVi
+dWdnZXJTdGVwVGhyb3VnaEF0dHJpYnV0ZQBTeXN0ZW0uQ29kZURvbS5Db21waWxlcgBHZW5lcmF0
+ZWRDb2RlQXR0cmlidXRlAERhdGFDb250cmFjdEF0dHJpYnV0ZQBTZXJpYWxpemFibGVBdHRyaWJ1
+dGUATm9uU2VyaWFsaXplZEF0dHJpYnV0ZQBPcHRpb25hbEZpZWxkQXR0cmlidXRlAFJlZmVyZW5j
+ZUVxdWFscwBJbnQzMgBFcXVhbHMARGVsZWdhdGUAQ29tYmluZQBTeXN0ZW0uVGhyZWFkaW5nAElu
+dGVybG9ja2VkAENvbXBhcmVFeGNoYW5nZQBSZW1vdmUAUHJvcGVydHlDaGFuZ2VkRXZlbnRBcmdz
+AEludm9rZQBCcm93c2FibGVBdHRyaWJ1dGUARGF0YU1lbWJlckF0dHJpYnV0ZQBTZXJ2aWNlQ29u
+dHJhY3RBdHRyaWJ1dGUAT3BlcmF0aW9uQ29udHJhY3RBdHRyaWJ1dGUAZ2V0X0NoYW5uZWwAR2V0
+T3V0cHV0SUQAR2V0Q29sdW1uSW5kZXhlcwBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0
+dHJpYnV0ZQBPcGVuAENsb3NlAHNldF9JdGVtAFNldE51bGwASW52YWxpZE9wZXJhdGlvbkV4Y2Vw
+dGlvbgBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAFR5cGUAUnVudGltZVR5cGVIYW5kbGUA
+R2V0VHlwZUZyb21IYW5kbGUAQXNzZW1ibHkAZ2V0X0Fzc2VtYmx5AEVkaXRvckJyb3dzYWJsZUF0
+dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQAu
+Y2N0b3IAU0NfZjA2Y2I1MmYyOGE5NDE1M2I1ZmRlZTY0Mzg1YTI4M2MuUHJvcGVydGllcy5SZXNv
+dXJjZXMucmVzb3VyY2VzAAAAABlBAGQAZAByAGUAcwBzAEwAaQBuAGUAMQAAGUEAZABkAHIAZQBz
+AHMATABpAG4AZQAyAAAXQQBkAGQAcgBlAHMAcwBUAHkAcABlAAAhQgB1AHMAaQBuAGUAcwBzAEUA
+bgB0AGkAdAB5AEkARAAACUMAaQB0AHkAACNDAG8AdQBuAHQAcgB5AFIAZQBnAGkAbwBuAE4AYQBt
+AGUAABlEAGUAbQBvAGcAcgBhAHAAaABpAGMAcwAAGUUAbQBhAGkAbABBAGQAZAByAGUAcwBzAAAd
+RQBtAGEAaQBsAFAAcgBvAG0AbwB0AGkAbwBuAAATRgBpAHIAcwB0AE4AYQBtAGUAABFMAGEAcwB0
+AE4AYQBtAGUAABVNAGkAZABkAGwAZQBOAGEAbQBlAAAXUABoAG8AbgBlAE4AdQBtAGIAZQByAAAf
+UABoAG8AbgBlAE4AdQBtAGIAZQByAFQAeQBwAGUAABVQAG8AcwB0AGEAbABDAG8AZABlAAAjUwB0
+AGEAdABlAFAAcgBvAHYAaQBuAGMAZQBOAGEAbQBlAAANUwB1AGYAZgBpAHgAAAtUAGkAdABsAGUA
+ACFXAGUAYgBTAGUAcgB2AGkAYwBlAE8AdQB0AHAAdQB0AAANQwBhAG4AYQBkAGEAAICbSQBzAE4A
+dQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABv
+ACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgA
+ZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAABxUwBDAF8AZgAwADYAYwBiADUAMgBm
+ADIAOABhADkANAAxADUAMwBiADUAZgBkAGUAZQA2ADQAMwA4ADUAYQAyADgAMwBjAC4AUAByAG8A
+cABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAAFs8K0/3T6pOqPBQVsKL7BYACLd6
+XFYZNOCJBhUSIQESFQYVEikBEgwIiYRdzYCAzJEDBhI5AgYOAgYIAwYSPQQgABI5BSABARI5AyAA
+DgQgAQEOAyAACAQgAQEIBCAAEj0FIAEBEj0DBhJBBSABARJBAyAAAQQoABI5AygADgMoAAgEKAAS
+PQUgARIICAUgAB0SCAYgAR0SCA4FIAIBDg4GIAIBDhJFByACARJJEkUDBhIkAwYSKAMGEiALIAQB
+CB0IHRJNElEDBhIUCSADARJNHQgSUQQgAQECAyAAAgMoAAIDBhItBSABARItAwYSVQMGElkEAAAS
+VQQAABJZBQABARJZBAgAElUECAASWQMGEjAEAAASMAQIABIwBAEAAAApAQAcU3lzdGVtLlJ1bnRp
+bWUuU2VyaWFsaXphdGlvbgc0LjAuMC4wAABeAQACAFQOBE5hbWUIQ3VzdG9tZXJUDglOYW1lc3Bh
+Y2U9aHR0cDovL3NjaGVtYXMuZGF0YWNvbnRyYWN0Lm9yZy8yMDA0LzA3L0FXMjAxMkN1c3RvbWVy
+U2VydmljZQUAAgIcHAQgAQIICwACEoCpEoCpEoCpDBABAx4AEB4AHgAeAAQKARJBCAcDEkESQRJB
+ByACARwSgLEEBwESQQUBAAAAACABABNTeXN0ZW0uU2VydmljZU1vZGVsBzQuMC4wLjAAADEBAAEA
+VA4RQ29uZmlndXJhdGlvbk5hbWUYQVcyMDEyU2VydmljZS5JQ3VzdG9tZXJzdwEAAgBUDgZBY3Rp
+b24paHR0cDovL3RlbXB1cmkub3JnL0lDdXN0b21lcnMvR2V0Q3VzdG9tZXJUDgtSZXBseUFjdGlv
+bjFodHRwOi8vdGVtcHVyaS5vcmcvSUN1c3RvbWVycy9HZXRDdXN0b21lclJlc3BvbnNleQEAAgBU
+DgZBY3Rpb24qaHR0cDovL3RlbXB1cmkub3JnL0lDdXN0b21lcnMvR2V0Q3VzdG9tZXJzVA4LUmVw
+bHlBY3Rpb24yaHR0cDovL3RlbXB1cmkub3JnL0lDdXN0b21lcnMvR2V0Q3VzdG9tZXJzUmVzcG9u
+c2WAiQEAAgBUDgZBY3Rpb24yaHR0cDovL3RlbXB1cmkub3JnL0lDdXN0b21lcnMvR2V0Q3VzdG9t
+ZXJzQnlSZWdpb25UDgtSZXBseUFjdGlvbjpodHRwOi8vdGVtcHVyaS5vcmcvSUN1c3RvbWVycy9H
+ZXRDdXN0b21lcnNCeVJlZ2lvblJlc3BvbnNlBCAAEwAGAAIIElEOBSABHQgIAwcBCAsHBB0SCBII
+HRIICAUgAgEIHAgAARKA0RGA1QUgABKA2QcgAgEOEoDZBAcBElUGIAEBEYDhCAEAAgAAAAAAAwAA
+AUcBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuMAEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUQ
+Lk5FVCBGcmFtZXdvcmsgNCgBACNTQ19mMDZjYjUyZjI4YTk0MTUzYjVmZGVlNjQzODVhMjgzYwAA
+DgEACU1pY3Jvc29mdAAAHwEAGkNvcHlyaWdodCBAIE1pY3Jvc29mdCAyMDEzAAAIAQAIAAAAAAAe
+AQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBALRNAAAAAAAAAAAAAM5NAAAAIAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAADATQAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/
+JQAgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAYAACA
+AAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWGAAAPgDAAAA
+AAAAAAAAAPgDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+AAABAAAA
+AQCJYNISAAABAIlg0hI/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBhAHIARgBp
+AGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAAsARYAwAA
+AQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAA0AwAAAQAwADAAMAAwADAANABiADAAAAA0
+AAoAAQBDAG8AbQBwAGEAbgB5AE4AYQBtAGUAAAAAAE0AaQBjAHIAbwBzAG8AZgB0AAAAcAAkAAEA
+RgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMAQwBfAGYAMAA2AGMAYgA1ADIAZgAy
+ADgAYQA5ADQAMQA1ADMAYgA1AGYAZABlAGUANgA0ADMAOAA1AGEAMgA4ADMAYwAAAEAADwABAEYA
+aQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgA0ADgAMQA4AC4AMgA0ADcAMQAzAAAAAABw
+ACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfAGYAMAA2AGMAYgA1ADIAZgAyADgA
+YQA5ADQAMQA1ADMAYgA1AGYAZABlAGUANgA0ADMAOAA1AGEAMgA4ADMAYwAuAGQAbABsAAAAXAAb
+AAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAA
+TQBpAGMAcgBvAHMAbwBmAHQAIAAyADAAMQAzAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBp
+AGwAZQBuAGEAbQBlAAAAUwBDAF8AZgAwADYAYwBiADUAMgBmADIAOABhADkANAAxADUAMwBiADUA
+ZgBkAGUAZQA2ADQAMwA4ADUAYQAyADgAMwBjAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0
+AE4AYQBtAGUAAAAAAFMAQwBfAGYAMAA2AGMAYgA1ADIAZgAyADgAYQA5ADQAMQA1ADMAYgA1AGYA
+ZABlAGUANgA0ADMAOAA1AGEAMgA4ADMAYwAAAEQADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBp
+AG8AbgAAADEALgAwAC4ANAA4ADEAOAAuADIANAA3ADEAMwAAAAAASAAPAAEAQQBzAHMAZQBtAGIA
+bAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4ANAA4ADEAOAAuADIANAA3ADEAMwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAwAAADgPQAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_f06cb52f28a94153b5fdee64385a283c</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages, Microsoft.SqlServer.VSTAScriptingLib, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum"
+                  typeConverter="NOTBROWSABLE">cf670d405ebde3f5c56d0802189e026e</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost, Microsoft.SqlServer.TxScript, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Script Component.Outputs[WebServiceOutput]"
+                  hasSideEffects="true"
+                  name="WebServiceOutput">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[WebServiceOutput].Columns[EmailAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="75"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[WebServiceOutput].Columns[EmailAddress]"
+                      name="EmailAddress" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[WebServiceOutput].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[WebServiceOutput].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[WebServiceOutput].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[WebServiceOutput].Columns[FirstName]"
+                      name="FirstName" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[WebServiceOutput]"
+              endId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+              name="WebServiceOutput"
+              startId="Package\Data Flow Task\Script Component.Outputs[WebServiceOutput]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Data Flow Task"
+          TopLeft="385,137" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Data Flow Task\Script Component"
+          TopLeft="390,127" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Data Flow Task\Row Count"
+          TopLeft="389,234" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[WebServiceOutput]"
+          TopLeft="472,169">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.5,65"
+              Start="0,0"
+              End="-17.5,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="-4,32.5" />
+                  <mssgle:LineSegment
+                    End="-13.5,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.5,32.5"
+                    Point2="-17.5,32.5"
+                    Point3="-17.5,36.5" />
+                  <mssgle:LineSegment
+                    End="-17.5,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.75,37.5,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

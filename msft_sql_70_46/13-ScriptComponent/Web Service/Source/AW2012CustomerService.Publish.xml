@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost/" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/AW2012CustomerService.dll" publishTime="03/10/2013 10:03:14" />
+    <file relUrl="Customers.svc" publishTime="03/09/2013 12:13:27" />
+    <file relUrl="Web.config" publishTime="03/10/2013 10:03:21" />
+    <file relUrl="bin/AW2012CustomerService.pdb" publishTime="03/10/2013 10:03:14" />
+  </publishProfile>
+</publishData>

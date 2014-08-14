@@ -1,0 +1,5 @@
+C:\Users\Garth\Documents\Visual Studio 2010\Projects\Nuggets\WcfServiceLibrary1\WcfService1\bin\AW2012CustomerService.dll
+C:\Users\Garth\Documents\Visual Studio 2010\Projects\Nuggets\WcfServiceLibrary1\WcfService1\bin\AW2012CustomerService.pdb
+C:\Users\Garth\Documents\Visual Studio 2010\Projects\Nuggets\WcfServiceLibrary1\WcfService1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Garth\Documents\Visual Studio 2010\Projects\Nuggets\WcfServiceLibrary1\WcfService1\obj\Debug\AW2012CustomerService.dll
+C:\Users\Garth\Documents\Visual Studio 2010\Projects\Nuggets\WcfServiceLibrary1\WcfService1\obj\Debug\AW2012CustomerService.pdb

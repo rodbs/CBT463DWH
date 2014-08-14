@@ -1,0 +1,16 @@
+C:\Users\Administrator\Desktop\NuggetTaskUI\bin\Release\NuggetTaskUI.dll
+C:\Users\Administrator\Desktop\NuggetTaskUI\bin\Release\NuggetTaskUI.pdb
+C:\Users\Administrator\Desktop\NuggetTaskUI\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\NuggetTaskUI\obj\Release\NuggetTaskEditor.resources
+C:\Users\Administrator\Desktop\NuggetTaskUI\obj\Release\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\NuggetTaskUI\obj\Release\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\NuggetTaskUI\obj\Release\NuggetTaskUI.dll
+C:\Users\Administrator\Desktop\NuggetTaskUI\obj\Release\NuggetTaskUI.pdb
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTaskUI\bin\Release\NuggetTaskUI.dll
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTaskUI\bin\Release\NuggetTaskUI.pdb
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTaskUI\obj\Release\ResolveAssemblyReference.cache
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTaskUI\obj\Release\NuggetTaskEditor.resources
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTaskUI\obj\Release\GenerateResource.read.1.tlog
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTaskUI\obj\Release\GenerateResource.write.1.tlog
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTaskUI\obj\Release\NuggetTaskUI.dll
+C:\70-463 Support Files\17-Deploying\CustomTask\source\NuggetTaskUI\obj\Release\NuggetTaskUI.pdb

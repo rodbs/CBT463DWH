@@ -1,0 +1,7 @@
+C:\Downloads\nugs\70-463\NuggetTaskUI\bin\Debug\NuggetTaskUI.dll
+C:\Downloads\nugs\70-463\NuggetTaskUI\bin\Debug\NuggetTaskUI.pdb
+C:\Downloads\nugs\70-463\NuggetTaskUI\bin\Debug\Microsoft.SqlServer.DTSRuntimeWrap.dll
+C:\Downloads\nugs\70-463\NuggetTaskUI\obj\Debug\NuggetTaskEditor.resources
+C:\Downloads\nugs\70-463\NuggetTaskUI\obj\Debug\NuggetTaskUI.csproj.GenerateResource.Cache
+C:\Downloads\nugs\70-463\NuggetTaskUI\obj\Debug\NuggetTaskUI.dll
+C:\Downloads\nugs\70-463\NuggetTaskUI\obj\Debug\NuggetTaskUI.pdb

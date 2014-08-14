@@ -1,0 +1,9 @@
+--Deploying to msdb (legacy)
+dtutil /FILE "C:\70-463 Support Files\17-Deploying\DimDate.dtsx" /COPY SQL;DimDate /DestServer SQLNUGGET
+dtutil /FILE "C:\70-463 Support Files\17-Deploying\DimDate.dtsx" /COPY SQL;DimDate /DestServer SQLNUGGET2 /DestU db_user /DestP db_password /Q
+
+
+--Deploying packages to MSDB, SSIS Package Store and File System
+/COPY SQL;destFolder\destPackage
+/COPY DTS;destPackage
+/COPY FILE;destPath

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/8/2013 6:50:25 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="SQLNUGGET"
+  DTS:CreatorName="SQLNUGGET\Administrator"
+  DTS:DTSID="{33729F61-ABA7-4186-8C97-8542659E8028}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DimDate"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{A41740F4-E0E0-4402-B137-76C2550ADA82}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load DimDate"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1F1F6693-FD60-408A-B317-C83341106B88}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load DimDate"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FC02C010-856C-40B4-8FE6-956CB0136791}"
+          SQLTask:SqlStatementSource="WITH DimDateCTE as&#xA;(&#xA;&#x9;SELECT CAST('2000-01-01' as DateTime) FullDate&#xA;&#x9;&#x9;UNION ALL&#xA;&#x9;SELECT &#xA;&#x9;&#x9;FullDate + 1&#xA;&#x9;FROM &#xA;&#x9;&#x9;DimDateCTE&#xA;&#x9;WHERE &#xA;&#x9;&#x9;FullDate + 1 &lt;= '2020-12-31'&#xA;)&#xA;INSERT INTO [dbo].[DimDate]&#xA;SELECT&#xA;&#x9;CAST(CONVERT(CHAR(8),CAST(FullDate AS DATETIME),112) AS INT) as DateKey,&#xA;&#x9;FullDate as FullDateAlternateKey,&#xA;&#x9;DATEPART(dw, FullDate) as DayNumberOfWeek,&#xA;&#x9;DATENAME(dw, FullDate) as EnglishDayNameOfWeek,&#xA;&#x9;'' as SpanishDayNameOfWeek,&#xA;&#x9;'' as FrenchDayNameOfWeek,&#xA;&#x9;DAY(FullDate) as DayNumberOfMonth,&#xA;&#x9;DATEPART(dy, FullDate) as DayNumberOfYear,&#xA;&#x9;DATEPART(wk, FullDate) as WeekNumberOfYear,  &#xA;&#x9;DATENAME(mm, FullDate) as EnglishMonthName, &#xA;&#x9;'' as SpanishMonthName, &#xA;&#x9;'' as FrenchMonthName, &#xA;&#x9;MONTH(FullDate) as MonthNumberOfYear,&#xA;&#x9;DATEPART(qq, FullDate) as CalendarQuarter,&#xA;&#x9;YEAR(FullDate) as CalendarYear,&#xA;&#x9;CASE WHEN MONTH(FullDate) &gt;= 1 AND MONTH (FullDate) &lt;=6 THEN 1 ELSE 2 END as CalendarSemester,&#xA;&#x9;DATEPART(quarter, FullDate) as FiscalDate,&#xA;&#x9;YEAR(FullDate) as FiscalYear,&#xA;&#x9;(MONTH(FullDate + 3) / 4) as FiscalSemester&#xA;FROM &#xA;&#x9;DimDateCTE&#xA;&#xA;OPTION (MAXRECURSION 0)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Load DimDate"
+          TopLeft="401,118" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

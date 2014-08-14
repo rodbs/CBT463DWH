@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/8/2013 6:50:56 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="SQLNUGGET"
+  DTS:CreatorName="SQLNUGGET\Administrator"
+  DTS:DTSID="{FF6821A3-40CB-409D-A502-30D8C37E53DB}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="_master"
+  DTS:PackageType="5"
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{ABD2DA7A-F795-4E30-8F53-BBAE5F143E9D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Internet Sales Data Mart"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{3716E9FB-A306-4102-86F9-FB3BA41F54F9}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Internet Sales Data Mart"
+      DTS:TransactionOption="2">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Internet Sales Data Mart\DimCustomer"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{829266EB-49FE-449D-BF73-50F85F802520}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DimCustomer"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimCustomer.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Internet Sales Data Mart\DimDate"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{5684268C-3012-4BB2-B844-5F694BD54E98}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DimDate"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimDate.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Internet Sales Data Mart\DimProduct"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{0F5946AF-44F9-4C89-BDAE-1505B5AE58B7}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DimProduct"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimProduct.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Internet Sales Data Mart\FactInternetSales"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{E1F5676B-2138-4352-ABDF-E271171719F0}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:ForceExecutionResult="1"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FactInternetSales"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>FactInternetSales.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Internet Sales Data Mart.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{82EA3157-CBDC-41AD-8840-CE2185DD52C9}"
+          DTS:From="Package\Internet Sales Data Mart\DimCustomer"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Internet Sales Data Mart\FactInternetSales" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Internet Sales Data Mart.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{4A3AE4FB-E314-408B-9EB2-7D5A9306DC1E}"
+          DTS:From="Package\Internet Sales Data Mart\DimProduct"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Internet Sales Data Mart\FactInternetSales" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Internet Sales Data Mart.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{AD393FB9-FEAB-45EC-B81A-214A8E7A4B67}"
+          DTS:From="Package\Internet Sales Data Mart\DimDate"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Internet Sales Data Mart\FactInternetSales" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Internet Sales Data Mart\DimCustomer"
+          TopLeft="54,101" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Internet Sales Data Mart\DimDate"
+          TopLeft="164.5,36" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Internet Sales Data Mart\DimProduct"
+          TopLeft="253,102" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Internet Sales Data Mart\FactInternetSales"
+          TopLeft="129,187" />
+        <EdgeLayout
+          Id="Package\Internet Sales Data Mart.PrecedenceConstraints[Constraint]"
+          TopLeft="126,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.25,44"
+              Start="0,0"
+              End="52.25,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9252173913043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.9252173913043"
+                    Point2="0,28.9252173913043"
+                    Point3="4,28.9252173913043" />
+                  <mssgle:LineSegment
+                    End="48.25,28.9252173913043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.25,28.9252173913043"
+                    Point2="52.25,28.9252173913043"
+                    Point3="52.25,32.9252173913043" />
+                  <mssgle:LineSegment
+                    End="52.25,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Internet Sales Data Mart.PrecedenceConstraints[Constraint 1]"
+          TopLeft="328,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.25,43"
+              Start="0,0"
+              End="-59.25,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2678260869565" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2678260869565"
+                    Point2="0,28.2678260869565"
+                    Point3="-4,28.2678260869565" />
+                  <mssgle:LineSegment
+                    End="-55.25,28.2678260869565" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.25,28.2678260869565"
+                    Point2="-59.25,28.2678260869565"
+                    Point3="-59.25,32.2678260869565" />
+                  <mssgle:LineSegment
+                    End="-59.25,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Internet Sales Data Mart.PrecedenceConstraints[Constraint 3]"
+          TopLeft="224.25,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,109"
+              Start="0,0"
+              End="0,101.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,101.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="471,284"
+          Size="471,327"
+          Id="Package\Internet Sales Data Mart"
+          TopLeft="261,67" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
